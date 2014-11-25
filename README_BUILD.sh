@@ -12,7 +12,7 @@ git config --global color.ui true
 # fetch blink     # Chromium code with Blink checked out to tip-of-tree
 # fetch android   # Chromium checkout for Android platform
 # fetch ios
-fetch chromium
+fetch blink
 gclient sync
 cd src
 # Makes branch Aoi.
