@@ -309,7 +309,7 @@
               ['branding=="Chrome"', {
                 'dmg_name': 'GoogleChrome.dmg',
               }, { # else: branding!="Chrome"
-                'dmg_name': 'Chromium.dmg',
+                'dmg_name': 'Aoi.dmg',
               }],
             ],
           },
