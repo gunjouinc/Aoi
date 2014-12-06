@@ -215,10 +215,10 @@ be available for now. -->
         Disconnecting <ph name="USERNAME">$1<ex>someone@example.com</ex></ph> will clear your history, bookmarks, settings, and other Chromium data stored on this device. Data stored in your Google Account will not be cleared and can be managed on <ph name="GOOGLE_DASHBOARD_LINK">&lt;a target="_blank" href="$2"&gt;</ph>Google Dashboard<ph name="END_GOOGLE_DASHBOARD_LINK">&lt;/a&gt;</ph>.
       </message>
       <message name="IDS_PRODUCT_NAME" desc="The Chrome application name">
-        Chromium
+        Aoi
       </message>
       <message name="IDS_SHORT_PRODUCT_NAME" desc="The Chrome application short name.">
-        Chromium
+        Aoi
       </message>
       <if expr="is_win">
         <message name="IDS_SXS_SHORTCUT_NAME" desc="The Chrome short cut name for SxS channel">
@@ -298,10 +298,10 @@ be available for now. -->
         </message>
       </if>
       <message name="IDS_ABOUT_VERSION_COMPANY_NAME" desc="Company name on the about pages">
-        The Chromium Authors
+        Gunjou Inc.
       </message>
       <message name="IDS_ABOUT_VERSION_COPYRIGHT" desc="Copyright information on the about pages">
-        Copyright <ph name="YEAR">$1</ph> The Chromium Authors. All rights reserved.
+        Copyright <ph name="YEAR">$1</ph> Gunjou Inc. All rights reserved.
       </message>
       <message name="IDS_ABOUT_VERSION_LICENSE" desc="The label below the copyright message, containing the URLs.">
         Chromium is made possible by the <ph name="BEGIN_LINK_CHROMIUM">&lt;a target="_blank" href="$1"&gt;</ph>Chromium<ph name="END_LINK_CHROMIUM">&lt;/a&gt;</ph> open source project and other <ph name="BEGIN_LINK_OSS">&lt;a target="_blank" href="$2"&gt;</ph>open source software<ph name="END_LINK_OSS">&lt;/a&gt;</ph>.
@@ -826,13 +826,13 @@ For Chromium, processes used to display diagnostics information (such as this "a
 
       <if expr="is_macosx">
         <message name="IDS_APP_MENU_PRODUCT_NAME" desc="The application's short name, used for the Mac's application menu, activity monitor, etc. This should be less than 16 characters. Example: Chrome, not Google Chrome.">
-          Chromium
+          Aoi
         </message>
         <message name="IDS_HELPER_NAME" desc="The helper application's name.  Should contain the Chrome application name (IDS_PRODUCT_NAME). Example: Google Chrome Helper.">
-          Chromium Helper
+          Aoi Helper
         </message>
         <message name="IDS_SHORT_HELPER_NAME" desc="The helper application's short name, used for the Mac's application menu, activity monitor, etc. Example: Chrome Helper, not Google Chrome Helper.">
-          Chromium Helper
+          Aoi Helper
         </message>
       </if>
 
