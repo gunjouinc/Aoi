@@ -90,7 +90,7 @@
           'buildtype%': 'Dev',
 
           # Override branding to select the desired branding flavor.
-          'branding%': 'Chromium',
+          'branding%': 'Aoi',
 
           'conditions': [
             # ChromeOS and Windows use Aura and Ash.
@@ -1647,7 +1647,7 @@
           ['branding=="Chrome"', {
             'ios_product_name%': 'Chrome',
           }, { # else: branding!="Chrome"
-            'ios_product_name%': 'Chromium',
+            'ios_product_name%': 'Aoi',
           }],
           ['branding=="Chrome" and buildtype=="Official"', {
             'ios_breakpad%': 1,
@@ -1899,7 +1899,7 @@
           ['branding=="Chrome"', {
             'mac_product_name%': 'Google Chrome',
           }, { # else: branding!="Chrome"
-            'mac_product_name%': 'Chromium',
+            'mac_product_name%': 'Aoi',
           }],
           # Official mac builds require a specific OS X SDK, but iOS and
           # non-official mac builds do not.
