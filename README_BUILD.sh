@@ -23,3 +23,5 @@ ninja -C out/Release build_app_dmg
 # Updates chromium source code.
 git rebase-update
 gclient sync
+# Run following command after changing code.
+gclient runhook
