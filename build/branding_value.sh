@@ -29,7 +29,7 @@ popd > /dev/null
 TOP="${BUILD_DIR}/.."
 
 case ${BUILD_BRANDING} in
-  Chromium)
+  Aoi)
     BRANDING_FILE="${TOP}/chrome/app/theme/chromium/BRANDING"
     ;;
   Chrome)
