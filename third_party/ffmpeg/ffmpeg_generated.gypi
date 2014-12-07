@@ -80,12 +80,12 @@
           'libavcodec/arm/sbrdsp_neon.S',
         ],
       }],  # ((target_arch == "arm" and arm_neon == 1)) and (ffmpeg_branding == "Chrome" or ffmpeg_branding == "ChromeOS") and (1)
-      ['(target_arch == "ia32" or target_arch == "x64") and (ffmpeg_branding == "Chrome" or ffmpeg_branding == "Chromium") and (OS == "win")', {
+      ['(target_arch == "ia32" or target_arch == "x64") and (ffmpeg_branding == "Chrome" or ffmpeg_branding == "Aoi") and (OS == "win")', {
         'c_sources': [
           'compat/msvcrt/snprintf.c',
           'compat/strtod.c',
         ],
-      }],  # (target_arch == "ia32" or target_arch == "x64") and (ffmpeg_branding == "Chrome" or ffmpeg_branding == "Chromium") and (OS == "win")
+      }],  # (target_arch == "ia32" or target_arch == "x64") and (ffmpeg_branding == "Chrome" or ffmpeg_branding == "Aoi") and (OS == "win")
       ['(target_arch == "ia32" or target_arch == "x64") and (ffmpeg_branding == "ChromiumOS" or ffmpeg_branding == "ChromeOS") and (1)', {
         'c_sources': [
           'libavcodec/x86/flacdsp_init.c',

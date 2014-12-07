@@ -411,7 +411,7 @@ if ((cpu_arch == "x86" || cpu_arch == "x64") && (ffmpeg_branding == "ChromiumOS"
   ]
 }
 
-if ((cpu_arch == "x86" || cpu_arch == "x64") && (ffmpeg_branding == "Chrome" || ffmpeg_branding == "Chromium") && (is_win)) {
+if ((cpu_arch == "x86" || cpu_arch == "x64") && (ffmpeg_branding == "Chrome" || ffmpeg_branding == "Aoi") && (is_win)) {
   ffmpeg_c_sources += [
     "compat/msvcrt/snprintf.c",
     "compat/strtod.c",

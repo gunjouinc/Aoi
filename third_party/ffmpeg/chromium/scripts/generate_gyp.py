@@ -132,7 +132,7 @@ GN_SOURCE_END = """]
 
 # Controls GYP conditional stanza generation.
 SUPPORTED_ARCHITECTURES = ['ia32', 'arm', 'arm-neon', 'x64']
-SUPPORTED_TARGETS = ['Chromium', 'Chrome', 'ChromiumOS', 'ChromeOS']
+SUPPORTED_TARGETS = ['Aoi', 'Chromium', 'Chrome', 'ChromiumOS', 'ChromeOS']
 # Mac doesn't have any platform specific files, so just use linux and win.
 SUPPORTED_PLATFORMS = ['linux', 'win']
 

@@ -22,6 +22,7 @@ FFMPEG_DIR = os.path.abspath(os.path.join(SCRIPTS_DIR, '..', '..'))
 
 
 BRANDINGS = [
+  'Aoi',
   'Chrome',
   'ChromeOS',
   'Chromium',
