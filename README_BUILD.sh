@@ -22,6 +22,7 @@ cd src
 git new-branch Aoi
 ninja -C out/Debug chrome
 ninja -C out/Release chrome
+# Creates installer. Use mini_installer on Windows.
 ninja -C out/Release build_app_dmg
 # Updates chromium source code.
 git rebase-update
