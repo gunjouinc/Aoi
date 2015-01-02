@@ -58,7 +58,7 @@ BrowserDistribution::Type GetCurrentDistributionType() {
 BrowserDistribution::BrowserDistribution()
     : type_(CHROME_BROWSER),
       app_reg_data_(make_scoped_ptr(
-          new NonUpdatingAppRegistrationData(L"Software\\Chromium"))) {
+          new NonUpdatingAppRegistrationData(L"Software\\Aoi"))) {
 }
 
 BrowserDistribution::BrowserDistribution(
@@ -209,27 +209,27 @@ base::string16 BrowserDistribution::GetStartMenuShortcutSubfolder(
 }
 
 base::string16 BrowserDistribution::GetBaseAppId() {
-  return L"Chromium";
+  return L"Aoi";
 }
 
 base::string16 BrowserDistribution::GetBrowserProgIdPrefix() {
   // This used to be "ChromiumHTML", but was forced to become "ChromiumHTM"
   // because of http://crbug.com/153349.  See the declaration of this function
   // in the header file for more details.
-  return L"ChromiumHTM";
+  return L"AoiHTM";
 }
 
 base::string16 BrowserDistribution::GetBrowserProgIdDesc() {
-  return L"Chromium HTML Document";
+  return L"Aoi HTML Document";
 }
 
 
 base::string16 BrowserDistribution::GetInstallSubDir() {
-  return L"Chromium";
+  return L"Aoi";
 }
 
 base::string16 BrowserDistribution::GetPublisherName() {
-  return L"Chromium";
+  return L"Aoi";
 }
 
 base::string16 BrowserDistribution::GetAppDescription() {
@@ -243,7 +243,7 @@ base::string16 BrowserDistribution::GetLongAppDescription() {
 }
 
 std::string BrowserDistribution::GetSafeBrowsingName() {
-  return "chromium";
+  return "aoi";
 }
 
 std::string BrowserDistribution::GetNetworkStatsServer() const {
@@ -255,11 +255,11 @@ base::string16 BrowserDistribution::GetDistributionData(HKEY root_key) {
 }
 
 base::string16 BrowserDistribution::GetUninstallLinkName() {
-  return L"Uninstall Chromium";
+  return L"Uninstall Aoi";
 }
 
 base::string16 BrowserDistribution::GetUninstallRegPath() {
-  return L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Chromium";
+  return L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Aoi";
 }
 
 BrowserDistribution::DefaultBrowserControlPolicy

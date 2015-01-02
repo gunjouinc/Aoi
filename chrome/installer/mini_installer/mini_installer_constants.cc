@@ -55,9 +55,9 @@ const wchar_t kCleanupRegistryKey[] =
     L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Google Chrome";
 #else
 // The path to the key containing each app's Client State registry key.
-const wchar_t kClientStateKeyBase[] = L"Software\\Chromium";
+const wchar_t kClientStateKeyBase[] = L"Software\\Aoi";
 // The path to the key in which kCleanupRegistryValue is found.
-const wchar_t kCleanupRegistryKey[] = L"Software\\Chromium";
+const wchar_t kCleanupRegistryKey[] = L"Software\\Aoi";
 #endif
 
 // One gigabyte is the biggest resource size that it can handle.
