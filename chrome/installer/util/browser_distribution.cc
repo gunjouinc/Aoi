@@ -161,7 +161,7 @@ base::string16 BrowserDistribution::GetActiveSetupGuid() {
 }
 
 base::string16 BrowserDistribution::GetBaseAppName() {
-  return L"Chromium";
+  return L"Aoi";
 }
 
 base::string16 BrowserDistribution::GetDisplayName() {
