@@ -1,0 +1,20 @@
+rule build_app_dmg_target_build_app_dmg_96c5d4190f2c4829eb45554359421a8b
+  command = cd ../../chrome; export $
+      BUILT_PRODUCTS_DIR=/Users/masao.miura/git/jp.co.gunjou.aoi/src/out/Release; $
+      export CONFIGURATION=Release; export PRODUCT_NAME=build_app_dmg; $
+      export $
+      SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk; $
+      export $
+      SRCROOT=/Users/masao.miura/git/jp.co.gunjou.aoi/src/out/Release/../../chrome; $
+      export SOURCE_ROOT="$${SRCROOT}"; export $
+      TARGET_BUILD_DIR=/Users/masao.miura/git/jp.co.gunjou.aoi/src/out/Release; $
+      export TEMP_DIR="$${TMPDIR}";tools/build/mac/build_app_dmg Aoi
+  description = ACTION build_app_dmg: $
+      build_app_dmg_96c5d4190f2c4829eb45554359421a8b
+  restat = 1
+
+build Aoi.dmg: $
+    build_app_dmg_target_build_app_dmg_96c5d4190f2c4829eb45554359421a8b $
+    ../../chrome/tools/build/mac/build_app_dmg $
+    ../../chrome/installer/mac/pkg-dmg Aoi.app || Aoi.app
+
