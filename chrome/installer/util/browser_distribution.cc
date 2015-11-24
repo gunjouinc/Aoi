@@ -18,18 +18,16 @@
 #include "chrome/common/chrome_icon_resources_win.h"
 #include "chrome/common/env_vars.h"
 #include "chrome/installer/util/app_registration_data.h"
-#include "chrome/installer/util/chrome_app_host_distribution.h"
 #include "chrome/installer/util/chrome_frame_distribution.h"
 #include "chrome/installer/util/chromium_binaries_distribution.h"
 #include "chrome/installer/util/google_chrome_binaries_distribution.h"
 #include "chrome/installer/util/google_chrome_distribution.h"
 #include "chrome/installer/util/google_chrome_sxs_distribution.h"
 #include "chrome/installer/util/install_util.h"
+#include "chrome/installer/util/installer_util_strings.h"
 #include "chrome/installer/util/l10n_string_util.h"
 #include "chrome/installer/util/master_preferences.h"
 #include "chrome/installer/util/non_updating_app_registration_data.h"
-
-#include "installer_util_strings.h"  // NOLINT
 
 using installer::MasterPreferences;
 
@@ -45,15 +43,12 @@ const wchar_t kCommandExecuteImplUuid[] =
 BrowserDistribution* g_browser_distribution = NULL;
 BrowserDistribution* g_chrome_frame_distribution = NULL;
 BrowserDistribution* g_binaries_distribution = NULL;
-BrowserDistribution* g_chrome_app_host_distribution = NULL;
 
 BrowserDistribution::Type GetCurrentDistributionType() {
-  // TODO(erikwright): If the app host is installed, but not Chrome, perhaps
-  // this should return CHROME_APP_HOST.
   return BrowserDistribution::CHROME_BROWSER;
 }
 
-}  // end namespace
+}  // namespace
 
 BrowserDistribution::BrowserDistribution()
     : type_(CHROME_BROWSER),
@@ -110,11 +105,6 @@ BrowserDistribution* BrowserDistribution::GetSpecificDistribution(
     case CHROME_FRAME:
       dist = GetOrCreateBrowserDistribution<ChromeFrameDistribution>(
           &g_chrome_frame_distribution);
-      break;
-
-    case CHROME_APP_HOST:
-      dist = GetOrCreateBrowserDistribution<ChromeAppHostDistribution>(
-          &g_chrome_app_host_distribution);
       break;
 
     default:
@@ -246,16 +236,8 @@ std::string BrowserDistribution::GetSafeBrowsingName() {
   return "aoi";
 }
 
-std::string BrowserDistribution::GetNetworkStatsServer() const {
-  return "";
-}
-
 base::string16 BrowserDistribution::GetDistributionData(HKEY root_key) {
   return L"";
-}
-
-base::string16 BrowserDistribution::GetUninstallLinkName() {
-  return L"Uninstall Aoi";
 }
 
 base::string16 BrowserDistribution::GetUninstallRegPath() {
@@ -275,15 +257,8 @@ bool BrowserDistribution::GetChromeChannel(base::string16* channel) {
   return false;
 }
 
-bool BrowserDistribution::GetCommandExecuteImplClsid(
-    base::string16* handler_class_uuid) {
-  if (handler_class_uuid)
-    *handler_class_uuid = kCommandExecuteImplUuid;
-  return true;
-}
-
-bool BrowserDistribution::AppHostIsSupported() {
-  return false;
+base::string16 BrowserDistribution::GetCommandExecuteImplClsid() {
+  return kCommandExecuteImplUuid;
 }
 
 void BrowserDistribution::UpdateInstallStatus(bool system_install,

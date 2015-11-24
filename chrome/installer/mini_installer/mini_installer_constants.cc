@@ -15,9 +15,14 @@ const wchar_t kChromeArchivePrefix[] = L"chrome";
 const wchar_t kSetupPrefix[] = L"setup";
 
 // Command line switch names for setup.exe.
+#if defined(COMPONENT_BUILD)
+const wchar_t kCmdUncompressedArchive[] = L"uncompressed-archive";
+#else
 const wchar_t kCmdInstallArchive[] = L"install-archive";
+#endif
 const wchar_t kCmdUpdateSetupExe[] = L"update-setup-exe";
 const wchar_t kCmdNewSetupExe[] = L"new-setup-exe";
+const wchar_t kCmdPreviousVersion[] = L"previous-version";
 
 // Temp directory prefix that this process creates.
 const wchar_t kTempPrefix[] = L"CR_";
@@ -41,6 +46,10 @@ const wchar_t kApRegistryValue[] = L"ap";
 // The name of the value in kCleanupRegistryKey that tells the installer not to
 // delete extracted files.
 const wchar_t kCleanupRegistryValue[] = L"ChromeInstallerCleanup";
+// These values provide installer result codes to Omaha.
+const wchar_t kInstallerErrorRegistryValue[] = L"InstallerError";
+const wchar_t kInstallerExtraCode1RegistryValue[] = L"InstallerExtraCode1";
+const wchar_t kInstallerResultRegistryValue[] = L"InstallerResult";
 // The name of an app's Client State registry value that holds the path to its
 // uninstaller.
 const wchar_t kUninstallRegistryValue[] = L"UninstallString";
