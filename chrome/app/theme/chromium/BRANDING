@@ -4,4 +4,6 @@ PRODUCT_FULLNAME=Aoi
 PRODUCT_SHORTNAME=Aoi
 PRODUCT_INSTALLER_FULLNAME=Aoi Installer
 PRODUCT_INSTALLER_SHORTNAME=Aoi Installer
-COPYRIGHT=Copyright 2015 Gunjou Inc. All rights reserved.
+COPYRIGHT=Copyright 2016 Gunjou Inc. All rights reserved.
+MAC_BUNDLE_ID=jp.co.gunjou.Aoi
+MAC_CREATOR_CODE=Ao24

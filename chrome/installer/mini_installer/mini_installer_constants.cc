@@ -69,7 +69,4 @@ const wchar_t kClientStateKeyBase[] = L"Software\\Aoi";
 const wchar_t kCleanupRegistryKey[] = L"Software\\Aoi";
 #endif
 
-// One gigabyte is the biggest resource size that it can handle.
-const size_t kMaxResourceSize = 1024*1024*1024;
-
 }  // namespace mini_installer

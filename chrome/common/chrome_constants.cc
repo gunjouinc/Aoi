@@ -3,6 +3,8 @@
 // found in the LICENSE file.
 
 #include "chrome/common/chrome_constants.h"
+
+#include "build/build_config.h"
 #include "chrome/common/chrome_version.h"
 
 #define FPL FILE_PATH_LITERAL
@@ -21,10 +23,6 @@
 namespace chrome {
 
 const char kChromeVersion[] = CHROME_VERSION_STRING;
-
-#if defined(OS_WIN)
-const char kChromeVersionEnvVar[] = "CHROME_VERSION";
-#endif
 
 // The following should not be used for UI strings; they are meant
 // for system strings only. UI changes should be made in the GRD.
@@ -122,7 +120,6 @@ const base::FilePath::CharType kFrameworkName[] =
 
 #if defined(OS_WIN)
 const base::FilePath::CharType kBrowserResourcesDll[] = FPL("chrome.dll");
-const base::FilePath::CharType kMetroDriverDll[] = FPL("metro_driver.dll");
 const base::FilePath::CharType kStatusTrayWindowClass[] =
     FPL("Chrome_StatusTrayWindow");
 #endif  // defined(OS_WIN)
@@ -207,17 +204,6 @@ const wchar_t kMetroNavigationAndSearchMessage[] =
     L"CHROME_METRO_NAV_SEARCH_REQUEST";
 const wchar_t kMetroGetCurrentTabInfoMessage[] =
     L"CHROME_METRO_GET_CURRENT_TAB_INFO";
-const wchar_t kMetroRegistryPath[] =
-    L"Software\\" PRODUCT_STRING_PATH L"\\Metro";
-const wchar_t kLaunchModeValue[] = L"launch_mode";
-// This is used by breakpad and the metrics reporting.
-const wchar_t kBrowserCrashDumpAttemptsRegistryPath[] =
-    L"Software\\" PRODUCT_STRING_PATH L"\\BrowserCrashDumpAttempts";
-const wchar_t kBrowserCrashDumpAttemptsRegistryPathSxS[] =
-    L"Software\\" PRODUCT_STRING_PATH L"\\BrowserCrashDumpAttemptsSxS";
-// This is used by browser exit code metrics reporting.
-const wchar_t kBrowserExitCodesRegistryPath[] =
-    L"Software\\" PRODUCT_STRING_PATH L"\\BrowserExitCodes";
 #endif
 
 #if defined(OS_CHROMEOS)
