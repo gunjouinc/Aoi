@@ -1,0 +1,6 @@
+google_api_key = "AIzaSyAJHB9ZsLNSJWGCumcn-uNXleIzKYbAhv8"
+google_default_client_id = "617630022235-p7q9nnaurn7sifskqb23bj6br9qetvsg.apps.googleusercontent.com"
+google_default_client_secret = "oxTQXVN2srkmk4eVj3SH35Ks"
+is_debug = false
+is_component_build = false
+symbol_level = 0

@@ -1,7 +1,10 @@
-# Gets depot_tools.
-# http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
+# https://www.chromium.org/developers/how-tos/get-the-code
+# https://www.chromium.org/developers/how-tos/api-keys
+#
+# On mac, Check below page.
+# https://chromium.googlesource.com/chromium/src/+/master/docs/mac_build_instructions.md
 # On Windows, Check below page.
-# http://www.chromium.org/developers/how-tos/build-instructions-windows
+# https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools
 export PATH=$PATH:/path_to_parent_dir/depot_tools
 # Configures git.
@@ -12,18 +15,18 @@ git config --global core.filemode false
 git config --global color.ui true
 # --- Fetches chromium ---
 # fetch chromium  # Basic checkout for desktop Chromium
-# fetch blink     # Chromium code with Blink checked out to tip-of-tree
+# fetch blink     # Removed! Chromium code with Blink checked out to tip-of-tree
 # fetch android   # Chromium checkout for Android platform
 # fetch ios
-fetch blink
+fetch chromium
 gclient sync
 cd src
-# Makes branch Aoi.
-git new-branch Aoi
-ninja -C out/Debug chrome
-ninja -C out/Release chrome
+# Setting up the build.
+gn gen out/Default
+# Replace out/Default/args.gn before build.
+ninja -C out/Default chrome
 # Creates installer. Use mini_installer on Windows.
-ninja -C out/Release build_app_dmg
+./build_app_dmg
 # Updates chromium source code.
 git rebase-update
 gclient sync
